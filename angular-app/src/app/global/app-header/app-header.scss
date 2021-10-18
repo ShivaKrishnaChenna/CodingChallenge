@@ -1,0 +1,23 @@
+@import '../../../styles.scss';
+
+$header-border-bottom-style: solid;
+$header-border-bottom-color: #D35106;
+$header-border-bottom-width: 2px;
+
+.header {
+  background-color: $g-bg-color;
+
+  border: {
+    bottom: {
+      color: $header-border-bottom-color;
+      width: $header-border-bottom-width;
+      style: $header-border-bottom-style;
+    }
+  }
+}
+
+.trans-button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

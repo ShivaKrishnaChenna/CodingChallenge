@@ -1,0 +1,38 @@
+table {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+    min-width: 500px;
+}
+
+th.mat-header-cell {
+    text-align: left;
+    max-width: 300px;
+}
+
+::ng-deep {
+    .cdk-overlay-container,
+    .cdk-global-overlay-wrapper {
+      pointer-events: none;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .cdk-overlay-container {
+      position: fixed;
+      z-index: 1000;
+    }
+  
+    .cdk-overlay-pane {
+      position: absolute;
+      pointer-events: auto;
+      box-sizing: border-box;
+      z-index: 1000;
+      display: flex;
+      max-width: 100%;
+      max-height: 100%;
+      background-color: white;
+      border: 1px solid rgba(128, 128, 128);
+    }
+  }

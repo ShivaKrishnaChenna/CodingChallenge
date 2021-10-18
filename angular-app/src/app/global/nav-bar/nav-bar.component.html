@@ -1,0 +1,27 @@
+<ng-container *ngIf="show">
+  <div class="side-nav">
+    <ul class="nav-item-group">
+      <li>
+        <select class="form-select text-primary"
+        #mySelect
+         (change)='onOptionsSelected(mySelect.value)'>
+          <option   [value]="0"> --Selected-- </option>
+          <option *ngFor="let item of customers; let i = index" [value]="item.customerId"> {{ item.firstName }} </option>
+        </select>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a (click)="customerInfo();"
+           class="nav-item-link" [routerLink]="['customer/' + this.selectedCustomer]">
+          Customer Info
+        </a>  
+      </li>
+      <li class="nav-item" class="nav-item" [routerLinkActive]="['active']">
+        <a (click)="productsInfo();"  
+           class="nav-item-link" [routerLink]="['product/' + this.selectedCustomer]">
+          Product Details
+        </a>
+      </li>
+    </ul>
+  </div>
+</ng-container>
+

@@ -1,0 +1,14 @@
+<div class="body-content">
+  <app-header></app-header>
+  <div class="row main-content">
+    <div class="col-sm-12 col-md-{{navMenuColWidth}} col-lg-{{navMenuColWidth}} col-xl-{{navMenuColWidth}}">
+      <app-nav-bar [show]="showNavBar"></app-nav-bar>
+    </div>
+    <div class="col-sm-12 col-md-{{12-navMenuColWidth}} col-lg-{{12-navMenuColWidth}} col-xl-{{12-navMenuColWidth}}">
+      <div class='container-fluid'>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>
+
